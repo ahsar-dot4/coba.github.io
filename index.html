@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html>
-<style type="text/css">
-    @import url(https://fonts.googleapis.com/css?family=Righteous);
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 2em;
-    filter: contrast(20);
-    background-color: black;
-    overflow: hidden;
-}
-
-h1 {
-    font-family: Righteous;
-    color: white;
-    font-size: 4rem;
-    text-transform: uppercase;
-    line-height: 1;
-    animation: letterspacing 5s infinite alternate ease-in-out;
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    letter-spacing: -2.2rem;
-}
-
-@keyframes letterspacing {
-    0% {
-        letter-spacing: -2.2rem;
-        filter: blur(.3rem);
+  <head>
+    <title>Login-page</title>
+  </head>
+  <style type="text/css">
+    body {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      color: cyan;
+      line-height: 1.25;
+      letter-spacing: 1px;
+      background-image: url("background.jpg");
+      background-size: cover;
     }
-
-    50% {
-        filter: blur(.5rem);
+    .box {
+      background-color: rgba(30, 42, 92, 0.897);
+      padding: 70px;
+      border-radius: 5%;
+      width: 280px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    100% {
-        letter-spacing: .5rem;
-        filter: blur(0rem);
-        color: #fff;
+    .center {
+      top: 50%;
+      width: 100%;
+      text-align: center;
     }
-}
-
-</style>
-<head>
-    <title></title>
-</head>
-<body>
-<div class="container">
-  <h1>Vivi Elek</h1>
-</div>
-</body>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 140px;
+      height: 140px;
+      transition-property: all;
+      transition-duration: 400ms;
+      transition-timing-function: linear;
+    }
+    img:hover {
+      transform: scale(1.3, 1.3);
+    }
+    input {
+      background-color: transparent;
+      color: cyan;
+      border: none;
+      border-bottom: 1px solid rgb(147, 141, 235);
+      width: 100%;
+      height: 35px;
+      transition-property: all;
+      transition-duration: 350ms;
+      transition-timing-function: linear;
+    }
+    input:hover {
+      transform: scale(1.05, 1.05);
+      background-color: rgba(30, 42, 92, 0.897);
+    }
+    button {
+      background-color: rgb(0, 37, 204);
+      border: none;
+      width: 100%;
+      height: 35px;
+      color: cyan;
+      transition-property: all;
+      transition-duration: 250ms;
+      transition-timing-function: linear;
+    }
+    button:hover {
+      transform: scale(1.05, 1.05);
+      background-color: rgb(0, 42, 228);
+    }
+  </style>
+  <body>
+    <br /><br /><br />
+    <div class="box">
+      <img src="logo.png" alt="logo" />
+      <p class="center">Silahkan login!</p>
+      <br /><br />
+      <form action="">
+        <label for="username">Username</label><br />
+        <input type="text" / placeholder="Username"><br /><br />
+        <label for="Password">Password</label><br />
+        <input type="password" / placeholder="Password"><br /><br /><br />
+        <button class="center">Login</button>
+      </form>
+    </div>
+  </body>
 </html>
